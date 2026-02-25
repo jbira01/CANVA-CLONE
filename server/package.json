@@ -1,0 +1,15 @@
+{
+  "name": "canva-clone-server",
+  "version": "1.0.0",
+  "description": "Run all microservices",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:design\" \"npm run dev:subscription\" \"npm run dev:upload\"",
+    "dev:gateway": "cd api-gateway && npm run dev",
+    "dev:design": "cd design-service && npm run dev",
+    "dev:subscription": "cd subscription-service && npm run dev",
+    "dev:upload": "cd upload-service && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
